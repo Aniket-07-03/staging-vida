@@ -32,7 +32,9 @@ const VITE_API_TOKEN='your_api_token_here';
     setUrlParams({
       sales_id: searchParams.get('SalesID') || '',
       user_id: searchParams.get('UserID') || '',
-      reffered_id: searchParams.get('RefferedID') || ''
+      reffered_id: searchParams.get('RefferedID') || '',
+      source: searchParams.get('source') || 'Default', // 👈 source add केलं
+
     });
   }, []);
 
