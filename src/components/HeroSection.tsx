@@ -86,7 +86,9 @@ const HeroSection = () => {
     try {
       const response = await fetch('https://stage-api.innercircle.onpointsoft.com/contacts/leads', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json',
+        'API-Key': 'g0lDLhAfguILFgAj4TaPoLGiUgqm/SjnaCD3IhdqWkXelMQzeXP/D8imi+H57YbugX27YvOANMjORiXi+IaYbQ=='
+         },
         body: JSON.stringify({ ...formData, ...urlParams }),
       });
 
