@@ -95,7 +95,7 @@ const HeroSection = () => {
       if (response.ok && result.success !== false && result.data?.deeplink) {
         setDeeplink(result.data.deeplink);
 
-        if (urlParams.sales_id && urlParams.reffered_id) {
+        // if (urlParams.sales_id && urlParams.reffered_id) {
           const generatedShortUrl = await generateShortUrl(
             urlParams.sales_id,
             urlParams.user_id,
@@ -103,7 +103,7 @@ const HeroSection = () => {
             urlParams.source
           );
           if (generatedShortUrl) setShortUrl(generatedShortUrl);
-        }
+        // }
 
         toast({ title: "Success!", description: "Your message has been sent successfully." });
         setFormData({ name: "", email: "", message: "" });
